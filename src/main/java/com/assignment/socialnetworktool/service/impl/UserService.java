@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
+import static com.assignment.socialnetworktool.constants.ExceptionConstants.USER_ALREADY_EXISTS_EXCEPTION;
+
 @Service
 public class UserService implements IUserService {
     private final IUserRepository userRepository;
@@ -23,7 +25,7 @@ public class UserService implements IUserService {
     @Override
     public void addUser(User user) {
         if(userRepository.exists(user.getUserId())){
-            throw new UserAlreadyExistsException("User already exists");
+            throw new UserAlreadyExistsException(USER_ALREADY_EXISTS_EXCEPTION);
         }
         userRepository.addUser(user);
     }
