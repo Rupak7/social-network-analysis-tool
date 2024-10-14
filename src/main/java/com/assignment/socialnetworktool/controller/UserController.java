@@ -5,6 +5,7 @@ import com.assignment.socialnetworktool.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.Map;
 
 @RestController
@@ -21,7 +22,7 @@ public class UserController {
      * @return     A success message indicating that the user was added successfully.
      */
     @PostMapping
-    public String addUser(@RequestBody User user) {
+    public String addUser(@Valid @RequestBody User user) {
         userService.addUser(user);
         return "User added successfully";
     }
