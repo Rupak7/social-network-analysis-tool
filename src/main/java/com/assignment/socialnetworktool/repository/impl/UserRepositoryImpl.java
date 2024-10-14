@@ -3,9 +3,12 @@ package com.assignment.socialnetworktool.repository.impl;
 import com.assignment.socialnetworktool.model.User;
 import com.assignment.socialnetworktool.repository.IUserRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.CollectionUtils;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 @Repository
 public class UserRepositoryImpl implements IUserRepository {
@@ -29,6 +32,11 @@ public class UserRepositoryImpl implements IUserRepository {
     @Override
     public Map<String, User> getAllUsers() {
         return users;
+    }
+
+    @Override
+    public boolean exists(String userId) {
+        return Objects.nonNull(users.get(userId));
     }
 }
 

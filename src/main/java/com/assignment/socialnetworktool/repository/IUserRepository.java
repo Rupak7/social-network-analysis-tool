@@ -9,4 +9,6 @@ public interface IUserRepository {
     void removeUser(String userId);
     User getUser(String userId);
     Map<String, User> getAllUsers();
+
+    boolean exists(String userId);
 }
