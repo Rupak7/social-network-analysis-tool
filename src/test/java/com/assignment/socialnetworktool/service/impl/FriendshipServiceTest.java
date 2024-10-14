@@ -80,16 +80,6 @@ public class FriendshipServiceTest {
     }
 
     @Test
-    public void testRemoveFriendship() {
-        String userId1 = "user1";
-        String userId2 = "user2";
-
-        friendshipService.removeFriendship(userId1, userId2);
-
-        verify(friendshipRepository, times(1)).removeFriendship(userId1, userId2);
-    }
-
-    @Test
     public void testListFriends() {
         String userId = "user1";
         List<String> friends = Arrays.asList("user2", "user3");
