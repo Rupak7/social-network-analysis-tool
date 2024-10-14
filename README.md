@@ -32,8 +32,9 @@
 3. Define a class to represent a user in the social network, including attributes like user ID and name.
 4. Create an interface that defines the contract for social network analysis operations such as finding the shortest path, calculating degree centrality, and identifying communities.
 5. Create a class that implements the `SocialNetworkService` interface, providing concrete methods for social network analysis.
-6. Create a class that ensures friendship operations are thread-safe by using synchronization mechanisms or thread-safe data structures.
+6. Create a class that ensures friendship operations are thread-safe by using global data structures.
 7. Define custom exception classes to handle specific exceptional situations that may arise during the execution of the application.
+8. Added junits for service classes.
 ## How to Run ?
 ### Pre-requisites:
 Tested with:
@@ -53,3 +54,4 @@ Tested with:
 1. Enhance the tool to support more complex social network metrics.
 2. Integrate with a database for persistent storage of user and friendship data.
 3. Implement more efficient algorithms for social network analysis.
+4. Enhance the utility to accomodate communities check through logic of connected components
